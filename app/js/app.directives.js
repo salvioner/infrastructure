@@ -45,6 +45,20 @@
       };
     })
     
+    /// viewApp -- Transport
+    
+    .directive('viewTransport', function(){
+      return{
+        restrict: 'AE',
+        scope: {
+          key: '='
+        },
+        replace: false,
+        controller: 'clientCntrl_viewTransport',
+        templateUrl: '/app/core/views/view-transport.html'
+      };
+    })
+    
     ;///
     
 }());
