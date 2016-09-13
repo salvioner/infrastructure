@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="clientApp">
+  <head>
+    <title></title>
+    <meta  charset="UTF-8">
+    <meta  author="Andrea Leone">
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/firebase/firebase.min.js"></script>
+    <script src="components/angularfire/angularfire.min.js"></script>
+    <script src="components/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/dexie/dexie.min.js"></script>
+    <script src="components/sugar/sugar.min.js"></script>
+    <script src="components/weather/weather.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/app.directives.js"></script>
+    <script src="app/js/functions.min.js"></script>
+    <link  href="app/css/main.css" rel="stylesheet">
+    <script>
+      var db = new Dexie("FirebaseOfflineBackup");
+      db.version(1).stores({
+        content: "id"
+      });      
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/sw.js')
+      }
+    </script>
+  </head>
+  <body ng-controller="clientCntrl" ui-view>
+  </body>
+</html>
