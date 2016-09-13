@@ -12,7 +12,7 @@
           key: '='
         },
         replace: false,
-        //controller: 'clientCntrl_viewHome',
+        controller: 'clientCntrl_viewHome',
         templateUrl: '/app/core/views/view-home.html'
       };
     })
@@ -26,8 +26,22 @@
           key: '='
         },
         replace: false,
-        //controller: 'clientCntrl_viewWeather',
+        controller: 'clientCntrl_viewWeather',
         templateUrl: '/app/core/views/view-weather.html'
+      };
+    })
+    
+    /// viewApp -- Supermarketlist
+    
+    .directive('viewSupermarketlist', function(){
+      return{
+        restrict: 'AE',
+        scope: {
+          key: '='
+        },
+        replace: false,
+        controller: 'clientCntrl_viewWeather',
+        templateUrl: '/app/core/views/view-supermarketlist.html'
       };
     })
     

@@ -20,7 +20,12 @@
         .state('weather', {
           url: '/weather',
           template: '<main view-weather></main>'
-        });
+        })
+        .state('supermarketlist', {
+          url: '/supermarketlist',
+          template: '<main view-supermarketlist></main>'
+        })
+        ;///
     })
     .controller('clientCntrl', function($scope){
     
